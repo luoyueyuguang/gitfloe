@@ -1,11 +1,12 @@
 # gitfloe — auto-sync your forks to upstream via GitHub's merge-upstream API.
 #
-# Auto-enumerated from your PUBLIC forks (36). DELETE the ones you DON'T want
-# to sync. Private forks aren't listed (add them by hand).
+# Auto-enumerated from your PUBLIC forks, minus the ones that CONFLICT on merge.
+# Removed (conflict): CAPEv2, Learning-CUDA, arxiv_rss_bot, llaisys.
+# DELETE any others you don't want to sync. Private forks aren't listed.
 #
 #   - fork:      your fork, "owner/fork-repo"
 #   - upstream:  reference only (the API uses the fork's GitHub parent).
-#   - branch:    which branch merge-upstream merges into (default: main).
+#   - branch:    which branch merge-upstream merges into.
 #   - handler:   plugin run on conflict/error (default: email).
 #
 # digest = overall summary emails. Disabled for now.
@@ -27,10 +28,6 @@ repos:
     fork: luoyueyuguang/Bold-Falcon
     upstream: PowerLZY/Bold-Falcon
     branch: master
-  - name: CAPEv2
-    fork: luoyueyuguang/CAPEv2
-    upstream: kevoreilly/CAPEv2
-    branch: master
   - name: CUDA_Kernel_Samples
     fork: luoyueyuguang/CUDA_Kernel_Samples
     upstream: Tongkaio/CUDA_Kernel_Samples
@@ -46,10 +43,6 @@ repos:
   - name: InfiniTrain
     fork: luoyueyuguang/InfiniTrain
     upstream: InfiniTensor/InfiniTrain
-    branch: master
-  - name: Learning-CUDA
-    fork: luoyueyuguang/Learning-CUDA
-    upstream: InfiniTensor/Learning-CUDA
     branch: master
   - name: MinivLLM
     fork: luoyueyuguang/MinivLLM
@@ -79,10 +72,6 @@ repos:
     fork: luoyueyuguang/Zero-DCE_extension
     upstream: Li-Chongyi/Zero-DCE_extension
     branch: main
-  - name: arxiv_rss_bot
-    fork: luoyueyuguang/arxiv_rss_bot
-    upstream: ITCJ/arxiv_rss_bot
-    branch: master
   - name: cm4mlops
     fork: luoyueyuguang/cm4mlops
     upstream: mlcommons/cm4mlops
@@ -118,10 +107,6 @@ repos:
   - name: learning-tools
     fork: luoyueyuguang/learning-tools
     upstream: InfiniTensor/learning-tools
-    branch: main
-  - name: llaisys
-    fork: luoyueyuguang/llaisys
-    upstream: InfiniTensor/llaisys
     branch: main
   - name: mini-sglang
     fork: luoyueyuguang/mini-sglang
