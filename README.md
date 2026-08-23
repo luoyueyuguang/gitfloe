@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/badge/python-3.12-3776AB" alt="Python 3.12">
   <img src="https://img.shields.io/github/stars/luoyueyuguang/gitfloe" alt="GitHub stars">
   <img src="https://img.shields.io/badge/sync-merge--upstream-38bdf8" alt="merge-upstream sync">
+  <img src="https://img.shields.io/github/actions/workflow/status/luoyueyuguang/gitfloe/ci.yml?branch=main" alt="CI passing">
 </p>
 
 Keep your **forks** in sync with their upstreams by calling GitHub's `merge-upstream` API — the
