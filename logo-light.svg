@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="gitfloe logo (light)">
+  <title>gitfloe</title>
+  <path d="M484,256 L370,453.4 L142,453.4 L28,256 L142,58.6 L370,58.6 Z" fill="#eef5fb" stroke="#eef5fb" stroke-width="46" stroke-linejoin="round"/>
+  <path d="M484,256 L370,453.4 L142,453.4 L28,256 L142,58.6 L370,58.6 Z" fill="none" stroke="#c9def2" stroke-width="4" stroke-linejoin="round"/>
+  <g>
+  <polygon points="314.0,372.0 285.0,422.2 227.0,422.2 198.0,372.0 227.0,321.8 285.0,321.8" fill="#8ecaf5" stroke="#eef5fb" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="213.5,314.0 184.5,364.2 126.5,364.2 97.5,314.0 126.5,263.8 184.5,263.8" fill="#a9d9f7" stroke="#eef5fb" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="213.5,198.0 184.5,248.2 126.5,248.2 97.5,198.0 126.5,147.8 184.5,147.8" fill="#63b2ea" stroke="#eef5fb" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="314.0,140.0 285.0,190.2 227.0,190.2 198.0,140.0 227.0,89.8 285.0,89.8" fill="#d9ecfc" stroke="#eef5fb" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="414.5,198.0 385.5,248.2 327.5,248.2 298.5,198.0 327.5,147.8 385.5,147.8" fill="#8ecaf5" stroke="#eef5fb" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="330.0,256.0 293.0,320.1 219.0,320.1 182.0,256.0 219.0,191.9 293.0,191.9" fill="#22a0e8" stroke="#eef5fb" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="362.1,293.0 341.1,329.4 299.1,329.4 278.1,293.0 299.1,256.6 341.1,256.6" fill="#cde9fb" stroke="#eef5fb" stroke-width="6" stroke-linejoin="round"/>
+</g>
+</svg>
