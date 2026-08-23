@@ -73,6 +73,18 @@ at it; external override built-ins by name.
     200 -> synced      204 -> up_to_date
     409 -> conflict (-> handler)    403/404/other -> error (-> handler)
 
+## Merging upstream changes (if you keep a private fork)
+
+If you maintain a private **fork** of this repo with your own `repos.yaml`, be careful when
+merging upstream: upstream no longer carries `repos.yaml` (it lives in `examples/repos.example.yaml`),
+so a plain `git merge upstream/main` can treat your private `repos.yaml` as "deleted upstream" and
+**drop it**. Before committing such a merge, restore it from the previous commit:
+
+    git status                            # watch for repos.yaml missing
+    git checkout <previous-commit> -- repos.yaml
+    git add repos.yaml && git commit
+
+
 ## Secrets (env only; NEVER commit)
 
 | `GITFLOE_TOKEN` | core | PAT on your forks with `Contents: write` (add `Workflows` if the upstream changes touch `.github/workflows/*`). |
