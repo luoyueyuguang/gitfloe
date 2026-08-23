@@ -1,5 +1,7 @@
 # gitfloe
 
+<p align="center"><img src="logo-lockup.svg" alt="gitfloe" width="420"/></p>
+
 Keep your **forks** in sync with their upstreams by calling GitHub's `merge-upstream` API — the
 exact same thing the web "Sync fork" button and `gh repo sync` do. **No git, no cloning.** When a
 fork has a **conflict**, it hands off to a **pluggable handler** (default: email). After each run —
