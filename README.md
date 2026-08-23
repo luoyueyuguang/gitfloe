@@ -2,6 +2,13 @@
 
 <p align="center"><img src="logo-lockup.svg" alt="gitfloe" width="420"/></p>
 
+<p align="center">
+  <img src="https://img.shields.io/github/license/luoyueyuguang/gitfloe" alt="License: MIT">
+  <img src="https://img.shields.io/badge/python-3.12-3776AB" alt="Python 3.12">
+  <img src="https://img.shields.io/github/stars/luoyueyuguang/gitfloe" alt="GitHub stars">
+  <img src="https://img.shields.io/badge/sync-merge--upstream-38bdf8" alt="merge-upstream sync">
+</p>
+
 Keep your **forks** in sync with their upstreams by calling GitHub's `merge-upstream` API — the
 exact same thing the web "Sync fork" button and `gh repo sync` do. **No git, no cloning.** When a
 fork has a **conflict**, it hands off to a **pluggable handler** (default: email). After each run —
