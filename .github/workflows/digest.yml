@@ -1,0 +1,40 @@
+name: digest
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"        # weekly, Monday 08:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # No sync token needed here — it only reads the committed event log and emails.
+      - name: Send periodic digest
+        env:
+          GITFLOE_SMTP_HOST:  ${{ secrets.GITFLOE_SMTP_HOST }}
+          GITFLOE_SMTP_PORT:  ${{ secrets.GITFLOE_SMTP_PORT }}
+          GITFLOE_SMTP_USER:  ${{ secrets.GITFLOE_SMTP_USER }}
+          GITFLOE_SMTP_PASS:  ${{ secrets.GITFLOE_SMTP_PASS }}
+          GITFLOE_MAIL_TO:    ${{ secrets.GITFLOE_MAIL_TO }}
+        run: python -m gitfloe.cli --config repos.yaml --digest-interval
+
+      - name: Commit digest watermark
+        run: |
+          git config user.name "gitfloe-bot"
+          git config user.email "bot@gitfloe.local"
+          git add state/
+          git diff --cached --quiet || git commit -m "update digest watermark"
+          git push

@@ -1,0 +1,48 @@
+name: fork-sync
+
+on:
+  schedule:
+    - cron: "0 9 * * *"        # 09:00 UTC daily
+  workflow_dispatch:           # manual trigger from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Fine-grained PAT scoped to *your fork repos* with Contents:write -> GITFLOE_TOKEN.
+      - name: Sync forks + dispatch handlers + run digest
+        env:
+          GITFLOE_TOKEN:      ${{ secrets.GITFLOE_TOKEN }}
+          GITFLOE_SMTP_HOST:  ${{ secrets.GITFLOE_SMTP_HOST }}
+          GITFLOE_SMTP_PORT:  ${{ secrets.GITFLOE_SMTP_PORT }}
+          GITFLOE_SMTP_USER:  ${{ secrets.GITFLOE_SMTP_USER }}
+          GITFLOE_SMTP_PASS:  ${{ secrets.GITFLOE_SMTP_PASS }}
+          GITFLOE_MAIL_TO:    ${{ secrets.GITFLOE_MAIL_TO }}
+          # LLM handler secrets — only needed for repos with "handler: ai".
+          GITFLOE_AI_ENDPOINT: ${{ secrets.GITFLOE_AI_ENDPOINT }}
+          GITFLOE_AI_KEY:      ${{ secrets.GITFLOE_AI_KEY }}
+          GITFLOE_AI_MODEL:    ${{ secrets.GITFLOE_AI_MODEL }}
+          # GITFLOE_HANDLER_PATH: /home/runner/work/gitfloe/gitfloe/handlers
+        run: python -m gitfloe.cli --config repos.yaml
+
+      # Persist state/ (event log + last-synced heads) so the interval digest can
+      # aggregate across runs. Pushed by GITHUB_TOKEN (won't re-trigger workflows).
+      - name: Commit sync state
+        run: |
+          git config user.name "gitfloe-bot"
+          git config user.email "bot@gitfloe.local"
+          git add state/
+          git diff --cached --quiet || git commit -m "update sync state"
+          git push

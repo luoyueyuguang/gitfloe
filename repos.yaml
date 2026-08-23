@@ -1,0 +1,165 @@
+# gitfloe — auto-sync your forks to upstream via GitHub's merge-upstream API.
+#
+# Auto-enumerated from your PUBLIC forks (36). DELETE the ones you DON'T want
+# to sync. Private forks aren't listed (add them by hand).
+#
+#   - fork:      your fork, "owner/fork-repo"
+#   - upstream:  reference only (the API uses the fork's GitHub parent).
+#   - branch:    which branch merge-upstream merges into (default: main).
+#   - handler:   plugin run on conflict/error (default: email).
+#
+# digest = overall summary emails. Disabled for now.
+default:
+  branch: main
+  strategy: auto
+  handler: email
+
+digest:
+  on_run: false
+  on_interval: false
+
+repos:
+  - name: AIInfra
+    fork: luoyueyuguang/AIInfra
+    upstream: Infrasys-AI/AIInfra
+    branch: main
+  - name: Bold-Falcon
+    fork: luoyueyuguang/Bold-Falcon
+    upstream: PowerLZY/Bold-Falcon
+    branch: master
+  - name: CAPEv2
+    fork: luoyueyuguang/CAPEv2
+    upstream: kevoreilly/CAPEv2
+    branch: master
+  - name: CUDA_Kernel_Samples
+    fork: luoyueyuguang/CUDA_Kernel_Samples
+    upstream: Tongkaio/CUDA_Kernel_Samples
+    branch: master
+  - name: InfiniCore
+    fork: luoyueyuguang/InfiniCore
+    upstream: InfiniTensor/InfiniCore
+    branch: main
+  - name: InfiniTensor_v2.0
+    fork: luoyueyuguang/InfiniTensor_v2.0
+    upstream: bitzyz/InfiniTensor_v2.0
+    branch: main
+  - name: InfiniTrain
+    fork: luoyueyuguang/InfiniTrain
+    upstream: InfiniTensor/InfiniTrain
+    branch: master
+  - name: Learning-CUDA
+    fork: luoyueyuguang/Learning-CUDA
+    upstream: InfiniTensor/Learning-CUDA
+    branch: master
+  - name: MinivLLM
+    fork: luoyueyuguang/MinivLLM
+    upstream: Wenyueh/MinivLLM
+    branch: main
+  - name: Modern-Cpp-Basics
+    fork: luoyueyuguang/Modern-Cpp-Basics
+    upstream: Extra-Creativity/Modern-Cpp-Basics
+    branch: main
+  - name: PAC
+    fork: luoyueyuguang/PAC
+    upstream: lglglglgy/PAC
+    branch: main
+  - name: RL-Kernel
+    fork: luoyueyuguang/RL-Kernel
+    upstream: RL-Align/RL-Kernel
+    branch: main
+  - name: TinyInfiniTensor
+    fork: luoyueyuguang/TinyInfiniTensor
+    upstream: InfiniTensor/TinyInfiniTensor
+    branch: main
+  - name: TinyInfiniTrain
+    fork: luoyueyuguang/TinyInfiniTrain
+    upstream: InfiniTensor/TinyInfiniTrain
+    branch: master
+  - name: Zero-DCE_extension
+    fork: luoyueyuguang/Zero-DCE_extension
+    upstream: Li-Chongyi/Zero-DCE_extension
+    branch: main
+  - name: arxiv_rss_bot
+    fork: luoyueyuguang/arxiv_rss_bot
+    upstream: ITCJ/arxiv_rss_bot
+    branch: master
+  - name: cm4mlops
+    fork: luoyueyuguang/cm4mlops
+    upstream: mlcommons/cm4mlops
+    branch: main
+  - name: cm4mlperf-inference
+    fork: luoyueyuguang/cm4mlperf-inference
+    upstream: mlcommons/cm4mlperf-inference
+    branch: main
+  - name: cuckoo
+    fork: luoyueyuguang/cuckoo
+    upstream: cuckoosandbox/cuckoo
+    branch: master
+  - name: deepseek-harness
+    fork: luoyueyuguang/deepseek-harness
+    upstream: deepseek-ai/deepseek-harness
+    branch: master
+  - name: dwm
+    fork: luoyueyuguang/dwm
+    upstream: stepbystepcode/dwm
+    branch: master
+  - name: go-llama-go
+    fork: luoyueyuguang/go-llama-go
+    upstream: InfiniTensor/go-llama-go
+    branch: master
+  - name: kungfudaibi.github.io
+    fork: luoyueyuguang/kungfudaibi.github.io
+    upstream: kungfudaibi/kungfudaibi.github.io
+    branch: main
+  - name: learning-cxx
+    fork: luoyueyuguang/learning-cxx
+    upstream: InfiniTensor/learning-cxx
+    branch: main
+  - name: learning-tools
+    fork: luoyueyuguang/learning-tools
+    upstream: InfiniTensor/learning-tools
+    branch: main
+  - name: llaisys
+    fork: luoyueyuguang/llaisys
+    upstream: InfiniTensor/llaisys
+    branch: main
+  - name: mini-sglang
+    fork: luoyueyuguang/mini-sglang
+    upstream: sgl-project/mini-sglang
+    branch: main
+  - name: oh-my-pi
+    fork: luoyueyuguang/oh-my-pi
+    upstream: can1357/oh-my-pi
+    branch: main
+  - name: proxy.py
+    fork: luoyueyuguang/proxy.py
+    upstream: abhinavsingh/proxy.py
+    branch: develop
+  - name: quant_gemv_test
+    fork: luoyueyuguang/quant_gemv_test
+    upstream: InfiniTensor/quant_gemv_test
+    branch: main
+  - name: resume
+    fork: luoyueyuguang/resume
+    upstream: luooofan/resume
+    branch: zh_CN
+  - name: sglang
+    fork: luoyueyuguang/sglang
+    upstream: sgl-project/sglang
+    branch: main
+  - name: smallchat
+    fork: luoyueyuguang/smallchat
+    upstream: antirez/smallchat
+    branch: main
+  - name: triton_docs_tutorials
+    fork: luoyueyuguang/triton_docs_tutorials
+    upstream: evintunador/triton_docs_tutorials
+    branch: main
+  - name: vllm
+    fork: luoyueyuguang/vllm
+    upstream: vllm-project/vllm
+    branch: main
+  - name: vllm-omni
+    fork: luoyueyuguang/vllm-omni
+    upstream: vllm-project/vllm-omni
+    branch: main
