@@ -1,0 +1,24 @@
+# gitfloe config template — copy to repos.yaml and fill in your forks.
+#
+# Each entry is one fork you OWN, plus the upstream to track.
+#   - fork:      your fork, "owner/fork-repo"
+#   - upstream:  reference only (merge-upstream uses the fork's GitHub parent)
+#   - branch:    which branch to keep in sync (default: main)
+#   - handler:   plugin run on conflict/error (default: email)
+#
+# digest controls overall-summary emails (set on_run/on_interval true + SMTP to enable).
+
+default:
+  branch: main
+  strategy: auto
+  handler: email
+
+digest:
+  on_run: false
+  on_interval: false
+
+repos:
+  - name: example-fork
+    fork: you/example-fork
+    upstream: someorg/example
+    branch: main
