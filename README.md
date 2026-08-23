@@ -31,7 +31,8 @@ It only ever writes to *your* forks (via the API), never to upstream.
 
 ## Layout
 
-    repos.yaml                       # forks + strategies + handlers + digest toggles
+    assets/                          # logo (logo.svg, logo-light.svg, logo-lockup.svg, favicon.ico)
+    examples/                        # templates: repos.example.yaml, .env.example
     gitfloe/
       cli.py                         # python -m gitfloe.cli
       core.py                        # calls merge-upstream; classifies result; dispatches
@@ -42,11 +43,12 @@ It only ever writes to *your* forks (via the API), never to upstream.
       handlers/
         email.py                     # default: email on conflict/error
         ai.py                        # example LLM handler (shows the hook)
+    tests/                           # pytest tests
     .github/workflows/
       sync.yml                       # scheduled sync + per-run digest + state commit
-      digest.yml                     # weekly aggregate digest
+      digest.yml                     # periodic aggregate digest
+      ci.yml                         # CI + pytest
     state/                           # committed back so history persists across runs
-    examples/.env.example            # local secrets template (never commit .env)
 
 ## Adding your forks
 
