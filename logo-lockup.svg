@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 240" width="780" height="240" role="img" aria-label="gitfloe logo">
   <title>gitfloe</title>
-  <defs><linearGradient id="ltxt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#eaf7ff"/><stop offset="1" stop-color="#a5dcff"/></linearGradient></defs>
+  <defs><linearGradient id="ltxt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#eaf7ff"/><stop offset="1" stop-color="#bcd7f0"/></linearGradient></defs>
   <g transform="translate(4.8,4.8) scale(0.45)"><path d="M484,256 L370,453.4 L142,453.4 L28,256 L142,58.6 L370,58.6 Z" fill="#0a1828" stroke="#0a1828" stroke-width="46" stroke-linejoin="round"/><g>
-  <polygon points="316.0,118.0 286.0,170.0 226.0,170.0 196.0,118.0 226.0,66.0 286.0,66.0" fill="#cfe9fd" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
-  <polygon points="162.0,256.0 133.0,306.2 75.0,306.2 46.0,256.0 75.0,205.8 133.0,205.8" fill="#9ed2f8" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
-  <polygon points="466.0,256.0 437.0,306.2 379.0,306.2 350.0,256.0 379.0,205.8 437.0,205.8" fill="#6fbaf0" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
-  <polygon points="316.0,394.0 286.0,446.0 226.0,446.0 196.0,394.0 226.0,342.0 286.0,342.0" fill="#e6f5ff" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
-  <polygon points="376.0,256.0 316.0,359.9 196.0,359.9 136.0,256.0 196.0,152.1 316.0,152.1" fill="#0ea5e9" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
-  <polygon points="426.0,172.0 405.0,208.4 363.0,208.4 342.0,172.0 363.0,135.6 405.0,135.6" fill="#c3e6fd" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
-  <polygon points="170.0,340.0 149.0,376.4 107.0,376.4 86.0,340.0 107.0,303.6 149.0,303.6" fill="#a3d9fb" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="316.0,118.0 286.0,170.0 226.0,170.0 196.0,118.0 226.0,66.0 286.0,66.0" fill="#d5ecfc" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="162.0,256.0 133.0,306.2 75.0,306.2 46.0,256.0 75.0,205.8 133.0,205.8" fill="#a8d8f8" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="466.0,256.0 437.0,306.2 379.0,306.2 350.0,256.0 379.0,205.8 437.0,205.8" fill="#8bcbf3" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="316.0,394.0 286.0,446.0 226.0,446.0 196.0,394.0 226.0,342.0 286.0,342.0" fill="#eff8ff" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="376.0,256.0 316.0,359.9 196.0,359.9 136.0,256.0 196.0,152.1 316.0,152.1" fill="#22a0e8" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="426.0,172.0 405.0,208.4 363.0,208.4 342.0,172.0 363.0,135.6 405.0,135.6" fill="#eaf6ff" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="170.0,340.0 149.0,376.4 107.0,376.4 86.0,340.0 107.0,303.6 149.0,303.6" fill="#cfeafd" stroke="#0a1a2c" stroke-width="6" stroke-linejoin="round"/>
 </g></g>
   <text x="252" y="152" font-size="96" font-weight="800" letter-spacing="-2" fill="url(#ltxt)" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">gitfloe</text>
-  <text x="254" y="200" font-size="22" font-weight="500" letter-spacing="4" fill="#7a9bc4" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">FORK &#183; SYNC &#183; UPSTREAM</text>
+  <text x="254" y="200" font-size="22" font-weight="500" letter-spacing="4" fill="#6f8fbc" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">FORK &#183; SYNC &#183; UPSTREAM</text>
 </svg>
