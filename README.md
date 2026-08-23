@@ -46,7 +46,7 @@ It only ever writes to *your* forks (via the API), never to upstream.
       sync.yml                       # scheduled sync + per-run digest + state commit
       digest.yml                     # weekly aggregate digest
     state/                           # committed back so history persists across runs
-    .env.example                     # local secrets template (never commit .env)
+    examples/.env.example            # local secrets template (never commit .env)
 
 ## Adding your forks
 

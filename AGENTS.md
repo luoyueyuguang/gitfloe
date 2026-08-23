@@ -25,7 +25,7 @@
     .github/workflows/digest.yml  # periodic aggregate digest
     .github/workflows/ci.yml      # CI + pytest
     state/                        # committed back so history persists across runs
-    .env.example                  # local secrets template (never commit .env)
+    examples/.env.example            # local secrets template (never commit .env)
 
 ## Run
 
