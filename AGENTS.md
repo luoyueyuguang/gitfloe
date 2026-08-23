@@ -9,8 +9,8 @@
 
 ## Architecture / key files
 
-    repos.yaml                    # forks to sync (copy repos.example.yaml first)
-    repos.example.yaml            # config template (no personal data)
+    assets/                       # logo (logo.svg, logo-light.svg, logo-lockup.svg, favicon.ico)
+    examples/repos.example.yaml   # config template (copy to repos.yaml)
     gitfloe/
       cli.py                      # entry point: python -m gitfloe.cli
       core.py                     # calls merge-upstream, classifies result, dispatches handlers
@@ -20,8 +20,10 @@
       digest.py                   # run + interval digest
       handlers/email.py           # default: email on conflict/error
       handlers/ai.py              # example LLM handler (shows the hook)
+    tests/                        # pytest tests
     .github/workflows/sync.yml    # scheduled sync + per-run digest + state commit
     .github/workflows/digest.yml  # periodic aggregate digest
+    .github/workflows/ci.yml      # CI + pytest
     state/                        # committed back so history persists across runs
     .env.example                  # local secrets template (never commit .env)
 

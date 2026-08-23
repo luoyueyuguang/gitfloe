@@ -1,6 +1,6 @@
 # gitfloe
 
-<p align="center"><img src="logo-lockup.svg" alt="gitfloe" width="420"/></p>
+<p align="center"><img src="assets/logo-lockup.svg" alt="gitfloe" width="420"/></p>
 
 <p align="center">
   <img src="https://img.shields.io/github/license/luoyueyuguang/gitfloe" alt="License: MIT">
@@ -50,7 +50,7 @@ It only ever writes to *your* forks (via the API), never to upstream.
 
 ## Adding your forks
 
-Edit `repos.yaml`:
+Copy the template `examples/repos.example.yaml` to `repos.yaml`, then edit it:
 
     default:
       branch: main
