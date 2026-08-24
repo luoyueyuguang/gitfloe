@@ -1,6 +1,6 @@
 [project]
 name = "gitfloe"
-version = "0.1.0"
+version = "0.1.1"
 description = "Keep GitHub forks in sync with upstreams via the merge-upstream API, with pluggable attention handlers"
 readme = "README.md"
 requires-python = ">=3.12"

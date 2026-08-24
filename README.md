@@ -1,6 +1,6 @@
 # gitfloe
 
-<p align="center"><img src="assets/logo-lockup.svg" alt="gitfloe" width="420"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/luoyueyuguang/gitfloe/main/assets/logo-lockup.svg" alt="gitfloe" width="420"/></p>
 
 <p align="center">
   <img src="https://img.shields.io/github/license/luoyueyuguang/gitfloe" alt="License: MIT">
