@@ -8,12 +8,32 @@
   <img src="https://img.shields.io/github/stars/luoyueyuguang/gitfloe" alt="GitHub stars">
   <img src="https://img.shields.io/badge/sync-merge--upstream-38bdf8" alt="merge-upstream sync">
   <img src="https://img.shields.io/github/actions/workflow/status/luoyueyuguang/gitfloe/ci.yml?branch=main" alt="CI passing">
+  <img src="https://img.shields.io/pypi/v/gitfloe" alt="PyPI version">
+  <img src="https://img.shields.io/pypi/pyversions/gitfloe" alt="PyPI Python versions">
+  <img src="https://img.shields.io/github/v/release/luoyueyuguang/gitfloe" alt="GitHub release">
 </p>
 
 Keep your **forks** in sync with their upstreams by calling GitHub's `merge-upstream` API — the
 exact same thing the web "Sync fork" button and `gh repo sync` do. **No git, no cloning.** When a
 fork has a **conflict**, it hands off to a **pluggable handler** (default: email). After each run —
 and periodically — it also emails an **overall digest** of what happened.
+
+## Install
+
+    pip install gitfloe            # or: uv tool install gitfloe
+
+Or grab a release from GitHub: https://github.com/luoyueyuguang/gitfloe/releases
+(source zip/tar.gz, or the built wheel/sdist).
+
+## Prerequisites
+
+- **GitHub CLI `gh`** — used for `gh repo sync` and running the workflow from the CLI.
+  Install: `brew install gh` (macOS) · `sudo apt install gh` (Debian/Ubuntu) · or
+  https://cli.github.com (other platforms), then `gh auth login`.
+- **Python 3.12+** (or `uv` for the `uv run gitfloe` flow).
+- A **fine-grained PAT** (`GITFLOE_TOKEN`) on the forks you want to sync, with
+  `Contents: read and write` (add `Workflows` if upstream changes touch `.github/workflows/*`).
+  See “Secrets” below.
 
 ## What it does
 
