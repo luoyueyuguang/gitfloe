@@ -1,4 +1,4 @@
-"""Command-line entry point: python -m gitfloe.cli --config repos.yaml."""
+"""Command-line entry point: `gitfloe` (or `python -m gitfloe.cli`) --config repos.yaml."""
 from __future__ import annotations
 
 import argparse

@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v6
         with:
           python-version: "3.12"
       - name: Install deps
-        run: pip install -r requirements.txt pytest
+        run: uv sync --frozen
       - name: Compile check
-        run: python -m compileall -q gitfloe
+        run: uv run python -m compileall -q gitfloe
       - name: Run tests
-        run: python -m pytest -q
+        run: uv run pytest -q

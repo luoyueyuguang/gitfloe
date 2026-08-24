@@ -14,12 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v6
         with:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: uv sync --frozen
 
       # No sync token needed here — it only reads the committed event log and emails.
       - name: Send periodic digest
@@ -29,7 +29,7 @@ jobs:
           GITFLOE_SMTP_USER:  ${{ secrets.GITFLOE_SMTP_USER }}
           GITFLOE_SMTP_PASS:  ${{ secrets.GITFLOE_SMTP_PASS }}
           GITFLOE_MAIL_TO:    ${{ secrets.GITFLOE_MAIL_TO }}
-        run: python -m gitfloe.cli --config repos.yaml --digest-interval
+        run: uv run gitfloe --config repos.yaml --digest-interval
 
       - name: Commit digest watermark
         run: |

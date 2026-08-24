@@ -29,10 +29,10 @@
 
 ## Run
 
-    pip install -r requirements.txt
-    python -m gitfloe.cli --config repos.yaml --dry-run        # read-only config/validation
-    python -m gitfloe.cli --config repos.yaml                  # real sync (needs GITFLOE_TOKEN)
-    python -m gitfloe.cli --config repos.yaml --digest-interval  # periodic digest only
+    uv sync
+    uv run gitfloe --config repos.yaml --dry-run        # read-only config/validation
+    uv run gitfloe --config repos.yaml                  # real sync (needs GITFLOE_TOKEN)
+    uv run gitfloe --config repos.yaml --digest-interval  # periodic digest only
 
 Manual single-fork sync: `gh repo sync <fork> --branch main`.
 
@@ -102,6 +102,7 @@ forks, with `Contents: read and write` (and `Workflows: read and write` if neede
 - Type hints + `from __future__ import annotations`. No `enum`/namespaces in edits.
 - Handlers must use **absolute** imports (`from gitfloe import smtp`) because they are
   loaded as standalone modules by `plugins.py`.
-- Don't commit `.env`, `workspace/`, `__pycache__/`; `state/` IS tracked (digest history).
+- Don't commit `.env`, `workspace/`, `__pycache__/`; `state/` IS tracked (digest history); `uv.lock` IS tracked.
+- Dependencies live in `pyproject.toml` (single dep: PyYAML); add via `uv add`.
 - Keep `--dry-run` side-effect free (no handler calls, no merge, no push).
 - Notifications are **off by default** (`digest.on_run/on_interval: false`).

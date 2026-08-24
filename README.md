@@ -86,10 +86,15 @@ ones override by name.
 
 ## Running locally
 
-    pip install -r requirements.txt
-    python -m gitfloe.cli --config repos.yaml --dry-run      # config/validation check (read-only)
-    python -m gitfloe.cli --config repos.yaml                # actually sync (needs GITFLOE_TOKEN)
-    python -m gitfloe.cli --config repos.yaml --digest-interval  # send periodic digest only
+    uv sync                                                      # install into .venv (PyYAML only)
+    uv run gitfloe --config repos.yaml --dry-run                 # config/validation check (read-only)
+    uv run gitfloe --config repos.yaml                           # actually sync (needs GITFLOE_TOKEN)
+    uv run gitfloe --config repos.yaml --digest-interval         # send periodic digest only
+
+## Installing from PyPI
+
+    uv tool install gitfloe       # or: pip install gitfloe
+    gitfloe --config repos.yaml --dry-run
 
 You can also trigger a single fork manually with the official CLI:
 

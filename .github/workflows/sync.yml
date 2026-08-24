@@ -14,12 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v6
         with:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: uv sync --frozen
 
       # Fine-grained PAT scoped to *your fork repos* with Contents:write -> GITFLOE_TOKEN.
       - name: Sync forks + dispatch handlers + run digest
@@ -35,7 +35,7 @@ jobs:
           GITFLOE_AI_KEY:      ${{ secrets.GITFLOE_AI_KEY }}
           GITFLOE_AI_MODEL:    ${{ secrets.GITFLOE_AI_MODEL }}
           # GITFLOE_HANDLER_PATH: /home/runner/work/gitfloe/gitfloe/handlers
-        run: python -m gitfloe.cli --config repos.yaml
+        run: uv run gitfloe --config repos.yaml
 
       # Persist state/ (event log + last-synced heads) so the interval digest can
       # aggregate across runs. Pushed by GITHUB_TOKEN (won't re-trigger workflows).
